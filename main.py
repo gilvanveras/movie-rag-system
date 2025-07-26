@@ -7,7 +7,10 @@ import sys
 # Add src directory to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "src"))
 
-if __name__ == "__main__":
-    import subprocess
-
-    subprocess.run([sys.executable, "-m", "streamlit", "run", "src/app.py"])
+# Import and run the main function from app.py
+try:
+    from app import main
+    main()
+except ImportError as e:
+    print(f"Error importing app: {e}")
+    print("Make sure you're running this with: streamlit run main.py")
