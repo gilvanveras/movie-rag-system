@@ -69,9 +69,6 @@ logs/
 # ChromaDB
 chroma_db/
 
-# WebDriver
-drivers/edgedriver_*.zip
-
 # Temporary files
 temp/
 tmp/
